@@ -160,6 +160,8 @@ var bear, logo, bird, cat;
 
 
 var superLoop = function(animal){
+
+	//Setup html elements for loop and update data
 	var els = document.querySelectorAll('.cls-6');
 	for (var i=0; i < els.length; i++) {
 		//Using loop for svg html elements
@@ -178,7 +180,7 @@ var superLoop = function(animal){
 
 
 	    // Code for setting an attribute
-	     els[i].setAttribute("d", svgValue);
+	     element.setAttribute("d", svgValue);
 	}
 
 }
