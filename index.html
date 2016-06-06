@@ -25,7 +25,7 @@
 	}
 	
 	path{
-		transition: .8s all;
+		transition: 5.8s all;
 	}
 
 	</style>
@@ -153,21 +153,21 @@ var coords = {
 // Variable shortcuts for animal to be created
 var bear, logo, bird, cat;
 //Above we declare in shortcut format. Below we assign them to the object values 
-bear = coords.bearObj;
-logo = coords.logoObj;
-bird = coords.birdObj;
-cat = coords.catObj;
+	bear = coords.bearObj;
+	logo = coords.logoObj;
+	bird = coords.birdObj;
+	cat = coords.catObj;
 
 
 var superLoop = function(animal){
 	var els = document.querySelectorAll('.cls-6');
 	for (var i=0; i < els.length; i++) {
-
 		//Using loop for svg html elements
 		// Setting the elements to a value on the loop
 	    var element = els[i];
 	    //***Logging all the elements on a loop
 	    console.log(element);
+
 
 
 		//Using Loop for the object values / SVG coordinates
@@ -176,9 +176,9 @@ var superLoop = function(animal){
 		// ***Logging the svg coordinates
 	    console.log(svgValue);
 
+
 	    // Code for setting an attribute
 	     els[i].setAttribute("d", svgValue);
-
 	}
 
 }
@@ -200,23 +200,7 @@ $("#click4").on("click",function(){
 	superLoop(cat);
 })
 	
-// $("#click").on("click",function(){
-// 	$("#bigTri2Path").addClass("bigTri2Bear");
-// 	$("#bigTri2Path").removeClass("logoOrigin");
 
-// 	$("#bigTri1Path").addClass("bigTri1Bear");
-// 	$("#bigTri1Path").removeClass("logoOrigin");
-// })
-
-
-
-// $("#click2").on("click",function(){
-// 	$("#bigTri2Path").removeClass("bigTri2Bear");
-// 	$("#bigTri2Path").addClass("logoOrigin");
-
-// 	$("#bigTri1Path").removeClass("bigTri1Bear");
-// 	$("#bigTri1Path").addClass("logoOrigin");
-// })
 
 </script>
 </body>
