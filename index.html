@@ -165,12 +165,27 @@ var catObj = {
 // 	$(this).attr("class", "hammered");
 // });
 
+var superLoop = function(){
+	var els = document.querySelectorAll('.cls-6');
+	for (var i=0; i < els.length; i++) {
 
-var els = document.querySelectorAll('.cls-6');
-for (var i=0; i < els.length; i++) {
-    els[i].setAttribute("d", bearObj.bigTri2);
-    console.log(els[i]);
-}
+		//Using loop for svg html elements
+		// Setting the elements to a value on the loop
+	    els[i].setAttribute("d", bearObj.bigTri2);
+	    //Logging all the elements on a loop
+	    console.log(els[i]);
+
+
+		// Using Loop for the object values / SVG coordinates
+		var object = Object.keys(bearObj)[i];
+		var svgValue = bearObj[object];
+	    console.log(svgValue);
+
+	}
+
+}();
+
+
 
 function bear(){
 	$("#bigTri2Path").attr("d",bearObj.bigTri2);
