@@ -150,24 +150,17 @@ var coords = {
 }
 
 
+// Variable shortcuts for animal to be created
+var bear, logo, bird, cat;
+//Bbove we declare in shortcut format. Below we assign them to the object values 
+bear = coords.bearObj;
+logo = coords.logoObj;
+bird = coords.birdObj;
+cat = coords.catObj;
 
 
-// Vanilla js approach
-// var childDivs = document.getElementById('test').getElementsByTagName('div');
-// for( i=0; i< childDivs.length; i++ )
-// {
-//  var childDiv = childDivs[i];
-// }
 
-//A naming convention of the SVG that matches the naming convention of the object. 
-// $('#logo > g').each(function () {
-// 	console.log(this);
-// 	$(this).hide(1000);
-// 	$(this).attr("d", bearObj.bigTri2);
-// 	$(this).attr("class", "hammered");
-// });
-
-var superLoop = function(){
+var superLoop = function(animal){
 	var els = document.querySelectorAll('.cls-6');
 	for (var i=0; i < els.length; i++) {
 
@@ -179,99 +172,33 @@ var superLoop = function(){
 
 
 		//Using Loop for the object values / SVG coordinates
-		var object = Object.keys(coords.bearObj)[i];
-		var svgValue = coords.bearObj[object];
+		var object = Object.keys(animal)[i];
+		var svgValue = animal[object];
 		// ***Logging the svg coordinates
 	    console.log(svgValue);
-
 
 	    // Code for setting an attribute
 	     els[i].setAttribute("d", svgValue);
 
 	}
 
-}();
-
-
-
-function bear(){
-	$("#bigTri2Path").attr("d",bearObj.bigTri2);
-
-	$("#bigTri1Path").attr("d",bearObj.bigTri1);
-
-	$("#smallTri1Path").attr("d",bearObj.smallTri1);
-
-	$("#smallTri2Path").attr("d",bearObj.smallTri2);
-
-	$("#mediumTriPath").attr("d",bearObj.mediumTri);
-
-	$("#diamondPath").attr("d",bearObj.diamond);
-
-	$("#rhombusPath").attr("d",bearObj.rhombus);
 }
 
-function logo(){
-	$("#bigTri2Path").attr("d",logoObj.bigTri2);
-
-	$("#bigTri1Path").attr("d",logoObj.bigTri1);
-
-	$("#smallTri1Path").attr("d",logoObj.smallTri1);
-
-	$("#smallTri2Path").attr("d",logoObj.smallTri2);
-
-	$("#mediumTriPath").attr("d",logoObj.mediumTri);
-
-	$("#diamondPath").attr("d",logoObj.diamond);
-
-	$("#rhombusPath").attr("d",logoObj.rhombus);
-}
-
-function bird(){
-	$("#bigTri2Path").attr("d",birdObj.bigTri2);
-
-	$("#bigTri1Path").attr("d",birdObj.bigTri1);
-
-	$("#smallTri1Path").attr("d",birdObj.smallTri1);
-
-	$("#smallTri2Path").attr("d",birdObj.smallTri2);
-
-	$("#mediumTriPath").attr("d",birdObj.mediumTri);
-
-	$("#diamondPath").attr("d",birdObj.diamond);
-
-	$("#rhombusPath").attr("d",birdObj.rhombus);
-}
-
-function cat(){
-	$("#bigTri2Path").attr("d",catObj.bigTri2);
-
-	$("#bigTri1Path").attr("d",catObj.bigTri1);
-
-	$("#smallTri1Path").attr("d",catObj.smallTri1);
-
-	$("#smallTri2Path").attr("d",catObj.smallTri2);
-
-	$("#mediumTriPath").attr("d",catObj.mediumTri);
-
-	$("#diamondPath").attr("d",catObj.diamond);
-
-	$("#rhombusPath").attr("d",catObj.rhombus);
-}
 
 $("#click").on("click",function(){
-	bear();
+	superLoop(bear);
 })
 
 $("#click2").on("click",function(){
-	logo();
+	superLoop(logo);
 })
 
 $("#click3").on("click",function(){
-	bird();
+	superLoop(bird);
 })
 
 $("#click4").on("click",function(){
-	cat();
+	superLoop(cat);
 })
 	
 // $("#click").on("click",function(){
